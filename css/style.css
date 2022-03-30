@@ -1,0 +1,934 @@
+@charset "UTF-8";
+
+/*Importações*/
+@font-face {
+    font-family: Cloud;
+    src: url('fonts/Cloud-Light.otf');
+}
+
+/*RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    border: none;
+    outline: none;
+    font-weight: 300;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+body {
+    background-color: #3b3c40;
+}
+footer{
+    flex-shrink:0;
+    padding-top:10%;
+    bottom:0;
+}
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*Cabeçalho*/
+hr {
+    margin: 0 auto;
+    width: 80%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, #CCC, transparent);
+}
+
+.cabecalho {
+    text-align: center;
+    display: block;
+    width: 100%;
+    float: left;
+    padding: 3% 4%;
+    background-color: #0b0c0d;
+}
+
+.menu-moredevice {
+    display: none;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    float: left;
+    background: url(../img/logo/logo-mobile-teste.png) center center/55px no-repeat;
+    font-size: 0;
+}
+
+.btn-menu {
+    background-color: #0b0c0d;
+    width: 55px;
+    height: 55px;
+    border: solid 3px white;
+    border-radius: 55px;
+    float: right;
+    text-align: center;
+    cursor: pointer;
+    color: #0b0c0d;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+    animation: pulse 2s infinite;
+}
+
+.btn-menu i {
+    color: #fff;
+    font-size: 2em;
+}
+
+#btlg {
+    display: block;
+}
+
+#btdg {
+    display: none;
+}
+
+.menu {
+    border-bottom-right-radius: 10px;
+    float: right;
+    display: none;
+    width: 75%;
+    height: 60%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.menu ul {
+    margin: 10%;
+    text-align: center;
+}
+
+.menu li {
+    font-family: sans-serif;
+    color: white;
+    font-size: 1.4em;
+    margin-top: 4%;
+    text-decoration: underline;
+}
+
+.menu li:hover {
+    border: 1px;
+    border-color: white;
+}
+
+.btn-close {
+    margin-left: 100%;
+    float: right;
+    text-align: right;
+    font-size: 3.9em;
+    color: white;
+}
+
+/*E-book*/
+.ebook {
+    align-items: center;
+    text-align: center;
+    background-color: #0b0c0d;
+    padding-bottom: 3%;
+}
+
+.ebook h2 {
+    font-size: 1.7em;
+    color: white;
+}
+
+.ebook-largedevice {
+    display: none;
+}
+
+.ebook h3 {
+    color: white;
+    font-size: 0.9em;
+    margin: 0 auto;
+}
+
+.ebook img {
+    width: 60%;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.ebook input {
+    color: white;
+    border: solid 1px #d9d9d9;
+    border-right: 0px;
+    background-color: #0b0c0d;
+    width: 70%;
+    height: 30px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.ebook button {
+    border: solid 1px #d9d9d9;
+    width: 20%;
+    height: 30px;
+    margin-top: 3%;
+    color: black;
+    border-radius: 0px 10px 10px 0px;
+    background-color: white;
+}
+
+/*posts*/
+.posts {
+    padding: 5%;
+}
+
+.posts article {
+    background-color: #0b0c0d;
+    margin-bottom: 8%;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    padding-bottom: 3%;
+}
+
+.posts article:last-child {
+    margin-bottom: 0%;
+    padding-bottom: 3%;
+}
+
+.posts article:first-child {
+    margin-top: 2%;
+}
+
+.posts .img-post {
+    font-size: 0;
+}
+
+.posts article img {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.posts article h1 {
+    color: white;
+    margin: 2%;
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+.posts article h2 {
+    color: white;
+    font-size: 1em;
+}
+
+.posts article p {
+    padding: 2%;
+    color: white;
+    font: .9em;
+}
+
+/*--aside--*/
+aside {
+    text-align: center;
+    margin: 5%;
+}
+
+.autores p {
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+.autores {
+    background-color: #d9d9d9;
+    padding: 5%;
+    border-bottom-left-radius: 10px;
+
+}
+
+.autores img {
+    border-radius: 50%;
+}
+
+.autores h1 {
+    margin: 5%;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+/*breads*/
+.breads {
+    margin-top: 3%;
+    text-align: left;
+}
+
+.breads h2 {
+    margin-left: -10px;
+    height: 90px;
+    width: 100%;
+    font-size: 0;
+}
+
+.viking {
+    width: 100%;
+    vertical-align: sub;
+    display: inline-flex;
+    border-bottom-left-radius: 10px;
+    border-left-color: #bfbfbf;
+    border-left-style: solid;
+    border-left-width: 10px;
+    border-top-left-radius: 10px;
+    box-sizing: border-box;
+    background-color: #0b0c0d;
+}
+
+
+
+.prop {
+    background: url(../img/badges/monitor-propaganda-invert.png) center center/270px no-repeat;
+}
+
+.king {
+    background: url(../img/badges/etc.png) center center/270px no-repeat;
+}
+
+.h2-viking {
+    background: url(../img/badges/afiliado-viking-badge.png) center center/270px no-repeat;
+}
+
+.breads div {
+    margin-top: 3%;
+}
+
+/*--Footer--*/
+.social {
+    width: 100%;
+    text-align: center;
+    background-color: #a6a6a6;
+}
+
+.social h1 {
+    padding-top: 6%;
+    font-weight: 700;
+    font-size: 1.9em;
+}
+
+.social i {
+    color: white;
+    font-size: 1.6em;
+}
+
+.social button {
+    margin: 2%;
+    background-color: #0b0c0d;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: solid 2px white;
+}
+
+.copy {
+    text-align: center;
+    background-color: #0b0c0d;
+}
+
+.copy h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.copy h3 {
+    color: white;
+    font-size: .8em;
+}
+
+.copy a {
+    color: white;
+    text-decoration: underline;
+
+}
+
+.copy i {
+    color: white;
+}
+
+/*--------Animações--------*/
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgb(71, 71, 71);
+    }
+
+    70% {
+        box-shadow: 0 0 0 12px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 10px);
+    }
+
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+/*página de um post*/
+
+.postssolo {
+    padding: 5%;
+}
+
+.postssolo article {
+    background-color: #0b0c0d;
+    width: 100%;
+    border-radius: 10px;
+}
+
+article.item h1 {
+    margin-top: 0;
+    padding: 0;
+    font-size: 1.5em;
+    text-align: left;
+    color: white;
+}
+
+article.item h2 {
+    padding: 0;
+    padding-bottom: 0;
+    font-size: .8em;
+    color: white;
+    text-align: left;
+}
+
+article.item h3{
+    text-align: left;
+    color: white;
+}
+
+article.item p {
+    padding: 0;
+    font-size: 1em;
+}
+
+article.item img {
+    width: 10%  !important;
+    height: 10% !important; 
+}
+
+article.item iframe {
+    width: 80%   !important;
+    height: auto !important; 
+}
+
+article.item {
+    padding: 4%;
+    text-align: left;
+    color: white;
+}
+
+
+
+
+
+
+/*---------Other Devices---------*/
+@media screen and (min-width: 480px) {
+
+    /*ebook*/
+    .ebook img {
+        width: 55%;
+    }
+
+    .ebook h3 {
+        font-size: 1.1em;
+    }
+
+    .ebook input {
+        font-size: 1.2em;
+        height: 40px;
+    }
+
+    .ebook button {
+        height: 40px;
+        font-size: 1.2em;
+    }
+
+    /*posts*/
+    .posts {
+        padding: 8%;
+    }
+
+    .posts article h1 {
+        color: white;
+        margin: 2%;
+        font-weight: 700;
+        font-size: 2em;
+    }
+
+    .posts article h2 {
+        font-size: 1.5em;
+    }
+
+    .posts article p {
+        font-size: 1.3em;
+    }
+
+    /*aside*/
+    aside {
+        margin: 8%;
+    }
+
+    .autores img {
+        width: 75%;
+    }
+
+    .autores h1 {
+        font-size: 2em;
+    }
+
+    .autores p {
+        font-size: 1.3em;
+    }
+
+    .breads h2 {
+        height: 130px;
+    }
+
+    .prop {
+        background: url(../img/badges/monitor-propaganda-invert.png) center center/360px no-repeat;
+    }
+
+    .king {
+        background: url(../img/badges/etc.png) center center/360px no-repeat;
+    }
+
+    .h2-viking {
+        background: url(../img/badges/afiliado-viking-badge.png) center center/360px no-repeat;
+    }
+
+    .breads div {
+        margin-top: 8%;
+    }
+
+    /*footer*/
+    .social {
+        width: 100%;
+        text-align: center;
+        background-color: #a6a6a6;
+    }
+
+    .social h1 {
+        font-size: 2.5em;
+    }
+
+    .social i {
+        font-size: 2.5em;
+    }
+
+    .social button {
+        margin-top: 8%;
+        margin-bottom: 6%;
+        background-color: #0b0c0d;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: solid 2px white;
+    }
+
+    .copy {
+        text-align: center;
+        background-color: #0b0c0d;
+    }
+
+    .copy h2 {
+        font-size: 2em;
+    }
+
+    .copy h3 {
+        font-size: 1em;
+        padding-bottom: 3%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .logo {
+        width: 90px;
+        height: 90px;
+        background: url(../img/logo/logo-mobile-teste.png) center center/90px no-repeat;
+    }
+
+    .btn-menu {
+        width: 90px;
+        height: 90px;
+        border-radius: 90px;
+
+    }
+
+    .btn-menu i {
+        font-size: 3em;
+    }
+
+    .ebook h2 {
+        font-size: 3em;
+    }
+
+    .ebook img {
+        width: 50%;
+    }
+
+    .ebook h3 {
+        font-size: 1.5em;
+    }
+
+    .ebook input {
+        height: 45px;
+        font-size: 1.5em;
+    }
+
+    .ebook button {
+        height: 45px;
+        font-size: 1.5em;
+    }
+
+    .breads h2 {
+        height: 150px;
+    }
+
+    .prop {
+        background: url(../img/badges/monitor-propaganda-invert.png) center center/500px no-repeat;
+    }
+
+    .king {
+        background: url(../img/badges/etc.png) center center/500px no-repeat;
+    }
+
+    .h2-viking {
+        background: url(../img/badges/afiliado-viking-badge.png) center center/500px no-repeat;
+    }
+
+    .social h1 {
+        font-size: 3.5em;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .btn-menu {
+        display: none;
+    }
+
+    .logo {
+        position: relative;
+        width: 100%;
+        height: 120px;
+        display: block;
+        background: url(../img/logo/logo-mobile-teste.png) center center/120px no-repeat;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-moredevice {
+        text-align: center;
+        background-color: #0b0c0d;
+        display: block;
+        padding-bottom: 3%;
+    }
+
+    .menu-moredevice a {
+        font-weight: 700;
+        margin-right: 3%;
+        font-size: 1.5em;
+        color: #CCC;
+    }
+
+    .menu-moredevice a:last-child {
+        margin-right: 0;
+    }
+
+    hr {
+        height: 3px;
+    }
+
+    .posts {
+        padding: 0;
+    }
+
+    .posts img {
+        display: none;
+    }
+
+    .posts article {
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .posts article:last-child {
+        padding-bottom: 0%;
+    }
+
+    .posts article p {
+        padding: 0;
+    }
+
+    .posts .img-post {
+        float: left;
+        margin: 0;
+        height: 250px;
+        width: 30%;
+        font-size: 0;
+        background: url(../img/article/img-article-test.png) center center/500px no-repeat;
+    }
+
+    .posts .text-art {
+        height: 250px;
+    }
+}
+
+@media screen and (min-width: 1140px) {
+    .logo {
+        position: relative;
+        display: inline-block;
+        width: 120px;
+        height: 120px;
+        background: url(../img/logo/logo-mobile-teste.png) center center/120px no-repeat;
+    }
+
+    .menu-moredevice {
+        position: relative;
+        width: 70%;
+        float: right;
+        text-align: right;
+        height: 120px;
+    }
+
+    .ases {
+        margin-top: 5.5%;
+    }
+
+    .menu-moredevice a {
+        font-size: 1.5em;
+    }
+
+    .ebook {
+        display: none;
+    }
+
+    .ebook-largedevice {
+        padding: 2%;
+        background-color: #0b0c0d;
+        text-align: center;
+        display: block;
+        width: 100%;
+        color: white;
+    }
+
+    .ebook-largedevice div {
+        display: inline-block;
+        width: 30%;
+        height: 250px;
+    }
+
+    .ebook-largedevice div:first-child {
+        text-align: left;
+        float: left;
+    }
+
+    .ebook-largedevice div:nth-child(3) {
+        text-align: right;
+        float: right;
+    }
+
+    .text1 {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3em;
+    }
+
+    .text2 {
+        color: rgba(0, 0, 0, 0);
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5em;
+        background: url(../img/ebook/ebook.png) center center/300px no-repeat;
+    }
+
+    .text3 {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2em;
+    }
+
+    .ebook-largedevice div:last-child {
+        height: 80px;
+        width: 100%;
+    }
+
+    .ebook-largedevice input {
+        color: white;
+        font-size: 2em;
+        border: solid 2px #d9d9d9;
+        border-right: 0px;
+        background-color: #0b0c0d;
+        width: 40%;
+        height: 50px;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .ebook-largedevice button {
+        font-size: 2em;
+        border: solid 1px #d9d9d9;
+        width: 20%;
+        height: 50px;
+        margin-top: 3%;
+        color: black;
+        border-radius: 0px 10px 10px 0px;
+        background-color: white;
+    }
+
+    main {
+        float: right;
+        width: 60%;
+        margin: .8%;
+        margin-right: 2%;
+    }
+
+    aside {
+        margin: 2%;
+        display: inline-block;
+        width: 30%;
+    }
+
+    .prop {
+        background: url(../img/badges/monitor-propaganda-invert.png) center center/300px no-repeat;
+    }
+
+    .king {
+        background: url(../img/badges/etc.png) center center/350px no-repeat;
+    }
+
+    .h2-viking {
+        background: url(../img/badges/afiliado-viking-badge.png) center center/300px no-repeat;
+    }
+
+    /*--Footer--*/
+    .social h1 {
+        padding-top: 2%;
+        font-size: 3em;
+    }
+
+    .social i {
+        font-size: 2em;
+    }
+
+    .social button {
+        margin: 2%;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    .copy {
+        padding-top: 1%;
+    }
+
+    .copy h2 {
+        font-size: 2.5em;
+    }
+
+    .copy h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 1820px) {
+    .logo {
+        width: 140px;
+        height: 140px;
+        background: url(../img/logo/logo-mobile-teste.png) center center/140px no-repeat;
+    }
+
+    .menu-moredevice {
+        position: relative;
+        width: 70%;
+        float: right;
+        text-align: right;
+        height: 140px;
+    }
+
+    .menu-moredevice a {
+        font-size: 1.8em;
+    }
+
+    .ebook-largedevice div {
+        height: 350px;
+    }
+
+    .text1 {
+        font-size: 3em;
+    }
+
+    .text2 {
+        height: 350px;
+        font-size: 10em;
+        background: url(../img/ebook/ebook.png) center center/350px no-repeat;
+    }
+
+    .text3 {
+        font-size: 2.5em;
+    }
+
+    .ebook-largedevice div:last-child {
+        height: 80px;
+    }
+
+    .autores img {
+        width: 75%;
+    }
+
+    .autores h1 {
+        font-size: 3.5em;
+    }
+
+    .autores p {
+        font-size: 2em;
+    }
+
+    main {
+        width: 65%;
+    }
+
+    aside {
+        width: 25%;
+    }
+
+    .prop {
+        background: url(../img/badges/monitor-propaganda-invert.png) center center/400px no-repeat;
+    }
+
+    .king {
+        background: url(../img/badges/etc.png) center center/450px no-repeat;
+    }
+
+    .h2-viking {
+        background: url(../img/badges/afiliado-viking-badge.png) center center/400px no-repeat;
+    }
+}
