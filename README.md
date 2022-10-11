@@ -1,5 +1,5 @@
 # MPWEB-BLOG
-Blog desenvolvido em PHP com banco de daos MYSQL para um cliente que vende cursos e infoprodutos na internet.
+Blog desenvolvido em PHP com banco de dados MYSQL para um cliente que vende cursos e infoprodutos na internet.
 
 ## Front-End
 HTML / CSS / PHP / JS
